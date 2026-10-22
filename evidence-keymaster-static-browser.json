@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-22",
+  "method": "T3 background browser on production preview, port 4311",
+  "mount": {
+    "background": "rgb(79, 70, 229)",
+    "externalResources": [],
+    "font": "Inter, sans-serif",
+    "heading": "KeyMaster",
+    "textLength": 685,
+    "title": "KeyMaster - Keyboard Shortcuts"
+  },
+  "interaction": {
+    "bookmarks": [
+      "cc-1"
+    ],
+    "removeButtons": 1,
+    "textLength": 3226
+  },
+  "verified": [
+    "Browse Database mounts 73 shortcut headings",
+    "Bookmark cc-1 persists after navigation/reload",
+    "Test bookmark removed to restore initial empty state"
+  ],
+  "limitations": [
+    "T3 accessibility snapshots timed out; DOM evaluation and locator clicks succeeded",
+    "Full practice curriculum and every viewport were not exhaustively tested"
+  ]
+}

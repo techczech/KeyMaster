@@ -23,7 +23,19 @@ View your app in AI Studio: https://ai.studio/apps/drive/1Afp-CGisLUgJEd9OpspAy7
 
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+   `npm ci`
+2. Run the app:
    `npm run dev`
+
+
+## Independent static build
+
+KeyMaster runs without an API key, AI Studio runtime or Google Cloud hosting. React, icons, styles and fonts are bundled locally.
+
+Use Node.js 22.12 or newer and npm. Run `npm ci`, `npm run typecheck` and `npm run build`. Run `npm run preview -- --host 127.0.0.1` to inspect the production build. Serve `dist/` from the root of any static host; do not serve the TypeScript source files. No environment variables, backend or proxy are required.
+
+### Cloudflare Pages preparation
+
+When deployment is authorised, connect this repository to Cloudflare Pages, choose the intended branch, set the build command to `npm ci && npm run build`, and set the output directory to `dist`. Use Node.js 22.12 or newer. Leave API-key and Google Cloud settings empty. This migration does not deploy the site or change DNS.
+
+Bookmarks and mastered shortcuts keep their existing browser localStorage keys. Browser storage belongs to its origin; a new hosting domain does not automatically receive data from the old domain.
