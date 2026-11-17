@@ -1,3 +1,4 @@
+import { CiteThisPage } from './Citation';
 import React, { useState, useMemo, useEffect } from 'react';
 import { SHORTCUTS } from './constants';
 import { Category, Platform, AppView } from './types';
@@ -520,7 +521,8 @@ const App: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </footer>
+        <CiteThisPage />
+</footer>
         </div>
     </div>
   );
